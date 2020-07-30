@@ -1,7 +1,7 @@
 {
-    "name": "laravel/horizon",
+        "name": "farhan-prixa/horizon-lumen",
     "description": "Dashboard and code-driven configuration for Laravel queues.",
-    "keywords": ["laravel", "queue"],
+    "keywords": ["lumen", "queue"],
     "license": "MIT",
     "authors": [
         {
@@ -15,29 +15,32 @@
         "ext-pcntl": "*",
         "ext-posix": "*",
         "cakephp/chronos": "^2.0",
-        "illuminate/contracts": "^7.0",
-        "illuminate/queue": "^7.0",
-        "illuminate/support": "^7.0",
+        "illuminate/contracts": "~5.7.0|~5.8.0|^6.0",
+        "illuminate/queue": "~5.7.0|~5.8.0|^6.0",
+        "illuminate/support": "~5.7.0|~5.8.0|^6.0",
         "ramsey/uuid": "^3.5|^4.0",
-        "symfony/process": "^5.0",
+        "symfony/process": "^4.2",
         "symfony/error-handler": "^5.0"
     },
     "require-dev": {
         "mockery/mockery": "^1.0",
         "orchestra/testbench": "^5.0",
-        "phpunit/phpunit": "^8.0",
+        "phpunit/phpunit": "^7.0|^8.0",
         "predis/predis": "^1.1"
     },
     "suggest": {
         "ext-redis": "Required to use the Redis PHP driver.",
         "predis/predis": "Required when not using the Redis PHP driver (^1.1)."
-    },
-    "autoload": {
+    },    
+	"autoload": {
         "psr-4": {
             "Laravel\\Horizon\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
-    "autoload-dev": {
+ "autoload-dev": {
         "psr-4": {
             "Laravel\\Horizon\\Tests\\": "tests/"
         }
