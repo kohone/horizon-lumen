@@ -124,13 +124,14 @@ class HorizonServiceProvider extends ServiceProvider
      */
     protected function configure()
     {
-        //$this->app->configure('horizon');
+        $this->app->configure('horizon');
         $this->mergeConfigFrom(
             __DIR__.'/../config/horizon.php', 'horizon'
         );
 
         Horizon::use(config('horizon.use', 'default'));
     }
+
 
     /**
      * Setup the resource publishing groups for Horizon.
@@ -141,7 +142,7 @@ class HorizonServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../stubs/HorizonServiceProvider.stub' => app_path('Providers/HorizonServiceProvider.php'),
+                __DIR__.'/../stubs/HorizonServiceProvider.stub' => app_path().'/Providers/HorizonServiceProvider.php',
             ], 'horizon-provider');
 
             $this->publishes([
