@@ -14,6 +14,7 @@ class Controller extends BaseController
      */
     public function __construct()
     {
-        $this->middleware(Authenticate::class);
+        // опираемся только на config('middleware')
+        //$this->middleware(Authenticate::class);
     }
 }
