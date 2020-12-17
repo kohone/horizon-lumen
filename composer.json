@@ -1,5 +1,5 @@
 {
-        "name": "farhan-prixa/horizon-lumen",
+    "name": "kohone/horizon-lumen",
     "description": "Dashboard and code-driven configuration for Laravel queues.",
     "keywords": ["lumen", "queue"],
     "license": "MIT",
